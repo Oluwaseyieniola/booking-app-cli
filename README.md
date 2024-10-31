@@ -19,15 +19,9 @@ Validation: The app validates user input. If the input is invalid (e.g., too man
 Concurrency: If the input is valid, it adds the booking to the list and then spawns a Goroutine to simulate sending a ticket confirmation email.
 Ticket Availability: The app dynamically adjusts the number of remaining tickets after each booking.
 
-booking-app-go/
-├── main.go                # Main application logic
-├── helper/
-│   └── validation.go      # Helper functions for input validation
-├── user_test.go           # Unit tests for validation, booking, and utility functions
-└── README.md              # Detailed explanation and instructions
 
 
-*Detailed Walkthrough*
+## Detailed Walkthrough
 1. Variables and Constants
 conferenceName: Stores the name of the conference.
 remainingTickets: Tracks the available tickets.
@@ -55,5 +49,5 @@ bookUser()
 Adds a valid booking to the list and decreases remainingTickets. It uses a mutex (mu) to avoid race conditions when multiple bookings occur simultaneously.
 
 sendTicket()
-Simulates sending a booking confirmation. The function waits 10 seconds, then prints a confirmation message. It uses sync.WaitGrou
+Simulates sending a booking confirmation. The function waits 10 seconds, then prints a confirmation message. It uses sync.WaitGrouP
 
